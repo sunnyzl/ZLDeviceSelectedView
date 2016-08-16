@@ -2,6 +2,8 @@
 
 ---
 You can use `ZLDeviceSelectedView` to choise the device which you selected.If you hanve any advice or problem, please [issue](https://github.com/sunnyzl/ZLDeviceSelectedView/issues) me.
+
+
 ![demo1](https://raw.githubusercontent.com/sunnyzl/ZLDeviceSelectedView/master/demo.gif)
 # Usage
 
