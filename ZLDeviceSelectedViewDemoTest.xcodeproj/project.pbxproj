@@ -10,7 +10,6 @@
 		308B1EE11D5DC2A000204953 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308B1EE01D5DC2A000204953 /* TestViewController.m */; };
 		30E9428D1D5C720200CB05C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E9428C1D5C720200CB05C4 /* main.m */; };
 		30E942901D5C720200CB05C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E9428F1D5C720200CB05C4 /* AppDelegate.m */; };
-		30E942931D5C720200CB05C4 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E942921D5C720200CB05C4 /* ViewController.m */; };
 		30E942961D5C720200CB05C4 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E942941D5C720200CB05C4 /* Main.storyboard */; };
 		30E942981D5C720200CB05C4 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 30E942971D5C720200CB05C4 /* Assets.xcassets */; };
 		30E9429B1D5C720200CB05C4 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 30E942991D5C720200CB05C4 /* LaunchScreen.storyboard */; };
@@ -55,8 +54,6 @@
 		30E9428C1D5C720200CB05C4 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		30E9428E1D5C720200CB05C4 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		30E9428F1D5C720200CB05C4 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
-		30E942911D5C720200CB05C4 /* ViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = ViewController.h; sourceTree = "<group>"; };
-		30E942921D5C720200CB05C4 /* ViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = ViewController.m; sourceTree = "<group>"; };
 		30E942951D5C720200CB05C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		30E942971D5C720200CB05C4 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		30E9429A1D5C720200CB05C4 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -155,8 +152,6 @@
 				30E942A21D5C721F00CB05C4 /* ZLDeviceSelectedView */,
 				30E9428E1D5C720200CB05C4 /* AppDelegate.h */,
 				30E9428F1D5C720200CB05C4 /* AppDelegate.m */,
-				30E942911D5C720200CB05C4 /* ViewController.h */,
-				30E942921D5C720200CB05C4 /* ViewController.m */,
 				308B1EDF1D5DC2A000204953 /* TestViewController.h */,
 				308B1EE01D5DC2A000204953 /* TestViewController.m */,
 				30E942941D5C720200CB05C4 /* Main.storyboard */,
@@ -365,7 +360,6 @@
 			files = (
 				30E942A81D5C725500CB05C4 /* ZLDeviceSelectedTitleView.m in Sources */,
 				30E943031D5C7F6A00CB05C4 /* ZLDeviceSelectedDeviceView.m in Sources */,
-				30E942931D5C720200CB05C4 /* ViewController.m in Sources */,
 				30E942F31D5C75B700CB05C4 /* SVIndefiniteAnimatedView.m in Sources */,
 				30E942EF1D5C75B700CB05C4 /* NSArray+MASAdditions.m in Sources */,
 				30E942B81D5C737C00CB05C4 /* ZLDeviceSelectedHeaderView.m in Sources */,
