@@ -51,7 +51,7 @@
         _cancelButton.titleLabel.font = [UIFont systemFontOfSize:17.f];
         [_cancelButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
         _cancelButton.backgroundColor = kRGBColorFromHex(0xB1C0C0);
-        [_cancelButton setTitle:@"取 消" forState:UIControlStateNormal];
+        [_cancelButton setTitle:@"cancle" forState:UIControlStateNormal];
         [_cancelButton addTarget:self action:@selector(cancleBtnDidClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _cancelButton;
@@ -63,7 +63,7 @@
         _confirmButton.titleLabel.font = [UIFont systemFontOfSize:17.f];
         _confirmButton.backgroundColor = kRGBColorFromHex(0x23CBD6);
         [_confirmButton setTitleColor:[UIColor whiteColor] forState:UIControlStateNormal];
-        [_confirmButton setTitle:@"确 定" forState:UIControlStateNormal];
+        [_confirmButton setTitle:@"confirm" forState:UIControlStateNormal];
         [_confirmButton addTarget:self action:@selector(confirmBtnDidClick:) forControlEvents:UIControlEventTouchUpInside];
     }
     return _confirmButton;
