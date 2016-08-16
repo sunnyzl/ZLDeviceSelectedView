@@ -47,8 +47,6 @@ ZLDeviceSelectedFooterViewDelegate
 @property (nonatomic, assign) NSInteger preSection;
 @property (nonatomic, assign) CGFloat tableViewOriginHeight;
 
-@property (nonatomic, assign, getter=isFirstIncome) BOOL firstIncome;
-
 @property (nonatomic, strong) ZLDeviceChoiseModel *selectedDeviceModel;
 @property (nonatomic, strong) NSIndexPath *selectedDeviceIndexPath;
 
@@ -68,7 +66,7 @@ ZLDeviceSelectedFooterViewDelegate
 
 - (instancetype)initWithTitle:(NSString *)title detailArray:(NSArray *)detailArray storeKey:(NSString *)storeKey selectedDeviceResult:(ZLDeviceSelectedViewHandler)result{
     if (self = [super init]) {
-        self.firstIncome = YES;
+        NSAssert(title != nil && detailArray.count < 5 && detailArray != nil && storeKey != nil, @"title, detailArray and storeKey can not be nil. The count of detailArray should be less than 5");
         self.backgroundColor = [UIColor colorWithWhite:.1f alpha:.6f];
         self.alpha = 0.1f;
         [self initialize];
@@ -146,23 +144,13 @@ ZLDeviceSelectedFooterViewDelegate
     WS(weakSelf);
     NSInteger count = (self.detailArray.count <= 3) ? self.detailArray.count : 3;
     CGFloat defaultCellHeight = [[[NSUserDefaults standardUserDefaults] objectForKey:ZLDeviceSelectedDeviceViewHeight(self.storedKey)] floatValue];
-    if (self.isFirstIncome) {
-        [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
-            make.centerX.equalTo(weakSelf);
-            make.width.equalTo(weakSelf).multipliedBy(deviceTableScale);
-            weakSelf.tableViewOriginHeight = headerHeight * count + titleFooterHeight * 2;
-            make.height.mas_equalTo(weakSelf.tableViewOriginHeight + defaultCellHeight);
-            make.top.equalTo(weakSelf).offset(([[UIScreen mainScreen] bounds].size.height - self.tableViewOriginHeight) / 2);
-        }];
-        self.firstIncome = NO;
-    }
-    else {
-        [self.tableView mas_updateConstraints:^(MASConstraintMaker *make) {
-            weakSelf.tableViewOriginHeight = headerHeight * count + titleFooterHeight * 2;
-            make.height.mas_equalTo(weakSelf.tableViewOriginHeight + defaultCellHeight);
-            make.top.equalTo(weakSelf).offset(([[UIScreen mainScreen] bounds].size.height - self.tableViewOriginHeight) / 2);
-        }];
-    }
+    [self.tableView mas_remakeConstraints:^(MASConstraintMaker *make) {
+        make.centerX.equalTo(weakSelf);
+        make.width.equalTo(weakSelf).multipliedBy(deviceTableScale);
+        weakSelf.tableViewOriginHeight = headerHeight * count + titleFooterHeight * 2;
+        make.height.mas_equalTo(weakSelf.tableViewOriginHeight + defaultCellHeight);
+        make.top.equalTo(weakSelf).offset(([[UIScreen mainScreen] bounds].size.height - self.tableViewOriginHeight) / 2);
+    }];
 }
 
 - (void)setTitle:(NSString *)title {
