@@ -59,6 +59,7 @@
         _titleLabel.textAlignment = NSTextAlignmentCenter;
         _titleLabel.font = [UIFont systemFontOfSize:17.f];
         _titleLabel.textColor = kRGBColorFromHex(0x1D1D26);
+        _titleLabel.adjustsFontSizeToFitWidth = YES;
     }
     return _titleLabel;
 }

@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		303CF31D1D63238300C26C78 /* ManageTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 303CF31C1D63238300C26C78 /* ManageTools.m */; };
 		308B1EE11D5DC2A000204953 /* TestViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 308B1EE01D5DC2A000204953 /* TestViewController.m */; };
 		30E9428D1D5C720200CB05C4 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E9428C1D5C720200CB05C4 /* main.m */; };
 		30E942901D5C720200CB05C4 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 30E9428F1D5C720200CB05C4 /* AppDelegate.m */; };
@@ -48,6 +49,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		303CF31B1D63238300C26C78 /* ManageTools.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = ManageTools.h; sourceTree = "<group>"; };
+		303CF31C1D63238300C26C78 /* ManageTools.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = ManageTools.m; sourceTree = "<group>"; };
 		308B1EDF1D5DC2A000204953 /* TestViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = TestViewController.h; sourceTree = "<group>"; };
 		308B1EE01D5DC2A000204953 /* TestViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = TestViewController.m; sourceTree = "<group>"; };
 		30E942881D5C720200CB05C4 /* ZLDeviceSelectedViewDemoTest.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = ZLDeviceSelectedViewDemoTest.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -154,6 +157,8 @@
 				30E9428F1D5C720200CB05C4 /* AppDelegate.m */,
 				308B1EDF1D5DC2A000204953 /* TestViewController.h */,
 				308B1EE01D5DC2A000204953 /* TestViewController.m */,
+				303CF31B1D63238300C26C78 /* ManageTools.h */,
+				303CF31C1D63238300C26C78 /* ManageTools.m */,
 				30E942941D5C720200CB05C4 /* Main.storyboard */,
 				30E942971D5C720200CB05C4 /* Assets.xcassets */,
 				30E942991D5C720200CB05C4 /* LaunchScreen.storyboard */,
@@ -379,6 +384,7 @@
 				30E942EB1D5C75B700CB05C4 /* MASConstraintMaker.m in Sources */,
 				30E942F21D5C75B700CB05C4 /* ViewController+MASAdditions.m in Sources */,
 				30E942FA1D5C784D00CB05C4 /* ZLDeviceSelectedViewModel.m in Sources */,
+				303CF31D1D63238300C26C78 /* ManageTools.m in Sources */,
 				30E942EE1D5C75B700CB05C4 /* MASViewConstraint.m in Sources */,
 				30E942F51D5C75B700CB05C4 /* SVProgressHUD.m in Sources */,
 				30E942ED1D5C75B700CB05C4 /* MASViewAttribute.m in Sources */,

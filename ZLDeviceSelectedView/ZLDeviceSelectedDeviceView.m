@@ -37,6 +37,8 @@
     self.icon.hidden = YES;
     self.layer.cornerRadius = 2.f;
     self.layer.masksToBounds = YES;
+    self.titleLabel.font = [UIFont systemFontOfSize:15.f];
+    self.titleLabel.adjustsFontSizeToFitWidth = YES;
     [self setValue:@"UIButtonTypeCustom" forKey:@"buttonType"];
     [self setTitleColor:kRGBColorFromHex(0x1D1D26) forState:UIControlStateNormal];
     [self setTitleColor:kRGBColorFromHex(0xFFB400) forState:UIControlStateDisabled];

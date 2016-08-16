@@ -19,6 +19,9 @@
 @property (weak, nonatomic) IBOutlet UIView *bottomDivider;
 
 @property (nonatomic, assign, getter=isHeaderCanChoice) BOOL headerCanChoice;
+@property (weak, nonatomic) IBOutlet UIView *selectedView;
+@property (weak, nonatomic) IBOutlet UILabel *selectedTitle;
+@property (weak, nonatomic) IBOutlet UILabel *tipsTitle;
 
 @end
 
@@ -35,6 +38,10 @@
     [self.icon setBackgroundImage:[UIImage imageNamed:model.selectedImage] forState:UIControlStateSelected];
     self.titleLabel.text = model.title;
     [self.titleLabel sizeToFit];
+    self.selectedTitle.text = model.title;
+    [self.selectedTitle sizeToFit];
+    self.tipsTitle.text = @"Choise the device";
+    [self.tipsTitle sizeToFit];
     self.headerCanChoice = model.vendor.count > 0;
     [self.model addObserver:self forKeyPath:@"selected" options:NSKeyValueObservingOptionNew context:nil];
 }
@@ -42,6 +49,8 @@
 - (void)observeValueForKeyPath:(NSString *)keyPath ofObject:(id)object change:(NSDictionary<NSString *,id> *)change context:(void *)context {
     if ([change objectForKey:NSKeyValueChangeNewKey]) {
         self.icon.selected = self.model.selected;
+        self.titleLabel.hidden = self.model.selected;
+        self.selectedView.hidden = !self.model.selected;
         self.backgroundColor = self.model.selected ? kRGBColorFromHex(0xE5F7FA) : [UIColor whiteColor];
         self.bottomDivider.hidden = self.model.selected;
     }
@@ -51,6 +60,8 @@
 - (void)awakeFromNib {
     [super awakeFromNib];
     self.headerCanChoice = NO;
+    self.selectedView.hidden = YES;
+    self.titleLabel.hidden = NO;
     [self addGestureRecognizer:[[UITapGestureRecognizer alloc] initWithTarget:self
                                                                        action:@selector(didSelectedTheHeader:)]];
 }

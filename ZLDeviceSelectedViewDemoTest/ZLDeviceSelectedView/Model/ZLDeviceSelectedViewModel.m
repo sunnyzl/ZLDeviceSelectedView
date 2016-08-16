@@ -24,4 +24,9 @@
     return model;
 }
 
+- (void)setVendor:(NSArray<ZLDeviceChoiseModel *> *)vendor {
+    _vendor = vendor;
+    self.canChoice = vendor.count > 0;
+}
+
 @end
