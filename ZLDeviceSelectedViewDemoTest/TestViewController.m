@@ -33,7 +33,7 @@
                                                                           ]
                                                                   }]
                        ];
-    [[[ZLDeviceSelectedView alloc] initWithTitle:@"请输入" detailArray:array selectedDeviceResult:^(NSDictionary *result) {
+    [[ZLDeviceSelectedView deviceSelectedViewWithTitle:@"请输入" detailArray:array storeKey:@"SimCardWrite" selectedDeviceResult:^(NSDictionary *result) {
         NSLog(@"%@", result);
     }] show];
 }
@@ -44,9 +44,6 @@
     
 }
 - (IBAction)buttonDidClick:(id)sender {
-//    ZLDeviceSelectedView *deviceView = [ZLDeviceSelectedView deviceSelectedViewWithTitle:@"123"];
-//    
-//    //    [self.view addSubview:deviceView];
      NSArray *detailArray = @[
                               [ZLDeviceSelectedViewModel modelWithDict:@{@"normalImage" : @"btn_NFC_nor", @"selectedImage" : @"btn_NFC_pre", @"title" : @"手机内置NFC", @"tipsWhenHasNoneDevice" : @"暂不支持NFC模式"
                                                                          }],
