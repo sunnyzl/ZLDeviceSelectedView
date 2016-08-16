@@ -26,6 +26,7 @@
     
 }
 - (IBAction)buttonDidClick:(id)sender {
+    /*
     NSMutableArray *bluetoothModelArray = [NSMutableArray arrayWithCapacity:8];
     for (NSInteger index = 0; index < 8; index++) {
         ZLDeviceChoiseModel *deviceChoiceModel = [[ZLDeviceChoiseModel alloc] init];
@@ -70,27 +71,28 @@
     NSArray *detailArray = @[nfcModel, bluetoothModel, otgModel];
     //  you can assignment like this
     
-    //    NSArray *detailArray = @[
-    //                             [ZLDeviceSelectedViewModel modelWithDict:@{@"normalImage" : @"btn_NFC_nor", @"selectedImage" : @"btn_NFC_pre", @"title" : @"NFC device", @"tipsWhenHasNoneDevice" : @"Temporarily dose not support NFC mode"
-    //                                                                        }],
-    //                             [ZLDeviceSelectedViewModel modelWithDict:@{@"normalImage" : @"btn_BT_nor", @"selectedImage" : @"btn_BT_pre", @"title" : @"Bluetooth device", @"vendor":@[
-    //                                                                                [ZLDeviceChoiseModel modelWithDict:@{@"vendorNumber":@"1", @"vendorName":@"NFC1"}],
-    //                                                                                [ZLDeviceChoiseModel modelWithDict:@{@"vendorNumber":@"2", @"vendorName":@"NFC2"}]
-    //                                                                                ]
-    //                                                                        }],
-    //                             [ZLDeviceSelectedViewModel modelWithDict:@{@"normalImage" : @"btn_OTG_nor", @"selectedImage" : @"btn_OTG_pre", @"title" : @"OTG device", @"tipsWhenHasNoneDevice" : @"Temporarily dose not support NFC mode"
-    //                                                                        }]
-    //                             ];
+//    NSArray *detailArray = @[
+//                             [ZLDeviceSelectedViewModel modelWithDict:@{@"normalImage" : @"btn_NFC_nor", @"selectedImage" : @"btn_NFC_pre", @"title" : @"NFC device", @"tipsWhenHasNoneDevice" : @"Temporarily dose not support NFC mode"
+//                                                                        }],
+//                             [ZLDeviceSelectedViewModel modelWithDict:@{@"normalImage" : @"btn_BT_nor", @"selectedImage" : @"btn_BT_pre", @"title" : @"Bluetooth device", @"vendor":@[
+//                                                                                [ZLDeviceChoiseModel modelWithDict:@{@"vendorNumber":@"1", @"vendorName":@"NFC1"}],
+//                                                                                [ZLDeviceChoiseModel modelWithDict:@{@"vendorNumber":@"2", @"vendorName":@"NFC2"}]
+//                                                                                ]
+//                                                                        }],
+//                             [ZLDeviceSelectedViewModel modelWithDict:@{@"normalImage" : @"btn_OTG_nor", @"selectedImage" : @"btn_OTG_pre", @"title" : @"OTG device", @"tipsWhenHasNoneDevice" : @"Temporarily dose not support NFC mode"
+//                                                                        }]
+//                             ];
+//    
+//    [[ZLDeviceSelectedView deviceSelectedViewWithTitle:@"Please choise the device of read ID Card" detailArray:detailArray storeKey:@"IDCardRead" selectedDeviceResult:^(NSDictionary *result) {
+//        NSLog(@"result: %@", result);
+//    }] show];
+     */
+    //  you can use it like this, then you should not assign the modelArray everytime when you use it.Because it is too long ,and you maybe make a mistake when you write it.So I think we can encapsulate it in a singleton method, just like the `ManageTools` I used in here.
     
-    [[ZLDeviceSelectedView deviceSelectedViewWithTitle:@"Please choise the device of read ID Card" detailArray:detailArray storeKey:@"IDCardRead" selectedDeviceResult:^(NSDictionary *result) {
-        NSLog(@"result: %@", result);
-    }] show];
-    //  you can use id like this, then you should not assign the modelArray everytime when you use it.Because it is too long ,and you maybe make a mistake when you write it.So I think we can encapsulate it in a singleton method, just like the `ManageTools` I used in here.
-    /*
     [ManageTools idCardDeviceSelectedView:^(NSDictionary *result) {
         NSLog(@"result: %@", result);
     }];
-     */
+    
     
 }
 - (IBAction)twoDidClick:(id)sender {

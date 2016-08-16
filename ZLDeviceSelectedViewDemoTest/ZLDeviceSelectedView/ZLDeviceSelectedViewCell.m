@@ -10,10 +10,9 @@
 #import "ZLDeviceSelectedDeviceContentView.h"
 #import "ZLDeviceSlectedViewConst.h"
 #import "ZLDeviceSelectedViewModel.h"
-#import "ZLDeviceChoiseModel.h"
 
 @interface ZLDeviceSelectedViewCell ()
-//<ZLDeviceSelectedDeviceContentViewDelegate>
+
 @property (weak, nonatomic) IBOutlet ZLDeviceSelectedDeviceContentView *deviceContentView;
 
 @end

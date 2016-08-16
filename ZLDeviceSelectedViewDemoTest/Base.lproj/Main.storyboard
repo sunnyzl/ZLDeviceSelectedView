@@ -18,15 +18,15 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ABX-7Q-ns0">
-                                <rect key="frame" x="166" y="208" width="46" height="30"/>
-                                <state key="normal" title="Button"/>
+                                <rect key="frame" x="148" y="208" width="82" height="30"/>
+                                <state key="normal" title="ReadIDCard"/>
                                 <connections>
                                     <action selector="buttonDidClick:" destination="KuL-If-D5G" eventType="touchUpInside" id="uAk-7K-4G9"/>
                                 </connections>
                             </button>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Sr8-29-9BE">
-                                <rect key="frame" x="174" y="297" width="30" height="30"/>
-                                <state key="normal" title="two"/>
+                                <rect key="frame" x="142" y="297" width="95" height="30"/>
+                                <state key="normal" title="WriteSimCard"/>
                                 <connections>
                                     <action selector="twoDidClick:" destination="KuL-If-D5G" eventType="touchUpInside" id="nwH-iC-jPu"/>
                                 </connections>
